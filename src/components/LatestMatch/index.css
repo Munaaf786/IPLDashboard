@@ -1,0 +1,132 @@
+* {
+  font-family: 'Bree Serif';
+  color: #ffffff;
+}
+
+.latest-match-container {
+  background-color: #0f172a;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.match-details-logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.competing-team {
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+.date {
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+.venue-and-result {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.competing-team-logo {
+  max-height: 120px;
+}
+
+.separator {
+  border: 1px solid #475569;
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .latest-match-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .match-details-logo-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .match-details-container {
+    width: 60%;
+  }
+
+  .competing-team {
+    font-size: 36px;
+    margin: 28px;
+  }
+
+  .date {
+    font-size: 32px;
+    margin: 28px;
+  }
+
+  .venue-and-result {
+    font-size: 28px;
+    margin: 24px;
+  }
+
+  .competing-team-logo {
+    max-width: 240px;
+    max-height: 240px;
+    margin: 0 auto;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+.innings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 12px;
+  text-align: right;
+}
+
+.innings-section-labels {
+  font-size: 20px;
+  margin: 12px;
+}
+
+.innings-values {
+  font-size: 16px;
+  margin: 12px;
+}
+
+@media (min-width: 767px) {
+  .innings-container {
+    align-items: flex-end;
+    padding-right: 16px;
+  }
+
+  .innings-section-labels {
+    font-size: 24px;
+  }
+
+  .innings-values {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .competing-team-logo {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
