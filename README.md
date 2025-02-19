@@ -1,6 +1,6 @@
-In this project, let's build an **IPL Dashboard App** by applying the concepts we have learned till now.
+In this project, I built an **IPL Dashboard App** by applying the concepts I have learned till now.
 
-### Refer to the image below:
+### Refer to the image below for Output:
 
 <br/>
 <div style="text-align: center;">
@@ -29,26 +29,26 @@ In this project, let's build an **IPL Dashboard App** by applying the concepts w
 - Start up the app using `npm start`
 </details>
 
-### Completion Instructions
+### Completed Following Instructions
 
 <details>
-<summary>Functionality to be added</summary>
+<summary>Functionality added</summary>
 <br/>
 
-The app must have the following functionalities
+The app has the following functionalities
 
-- When the app is opened, Home Route should be displayed
+- When the app is opened, Home Route displayed
 - When the Home Route is opened,
-  - Make HTTP GET request to the **teamsApiUrl**
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the list of teams should be displayed
-- When a team card in Home Route is clicked,
-  - Page should be navigated to the Team Matches Route with the URL `/team-matches/:id`
+  - An HTTP GET request is made to the **teamsApiUrl**
+  - A **_loader_** is displayed while fetching the data.
+  - After fetching the data, the list of teams is displayed.
+- When a team card in the Home Route is clicked,
+  - The page navigates to the Team Matches Route with the URL `/team-matches/:id`.
 - When the Team Matches Route is opened,
-  - Make HTTP GET request to the **teamMatchesApiUrl** with the team id to get the recent matches data of the team
+  - An HTTP GET request is made to the **teamMatchesApiUrl** with the team id to get the recent matches data of the team.
     - Example: `https://apis.ccbp.in/ipl/KKR`
-  - **_loader_** should be displayed while fetching the data
-  - After fetching the data, the team banner, latest match, and list of recent matches should be displayed
+  - A **_loader_** is displayed while fetching the data.
+  - After fetching the data, the team banner, latest match, and list of recent matches are displayed.
 
 </details>
 
@@ -76,7 +76,7 @@ Returns a response containing the list of all IPL teams
       "name": "Royal Challengers Bangalore",
       "id": "RCB",
       "team_image_url": "https://assets.ccbp.in/frontend/react-js/rcb-logo-img.png",
-      // use value of the key 'name' for alt as `${name}`
+      // used value of the key 'name' for alt as `${name}`
     },
     ...
   ],
@@ -109,7 +109,7 @@ Returns a response containing details of all recent matches of a team
     "venue": "At Sheikh Zayed Stadium, Abu Dhabi",
     "competing_team": "Sunrisers Hyderabad",
     "competing_team_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Sunrisers_Hyderabad.svg/1200px-Sunrisers_Hyderabad.svg.png",
-    // use value of the key 'competing_team' for alt as `latest match ${competing_team}`
+    // used value of the key 'competing_team' for alt as `latest match ${competing_team}`
     "first_innings": "Sunrisers Hyderabad",
     "second_innings": "Kolkata Knight Riders",
     "match_status": "Won",
@@ -124,7 +124,7 @@ Returns a response containing details of all recent matches of a team
       "venue": "At Sharjah Cricket Stadium, Sharjah",
       "competing_team": "Royal Challengers Bangalore",
       "competing_team_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png",
-      // use value of the key 'competing_team' for alt as `competing team ${competing_team}`
+      // used value of the key 'competing_team' for alt as `competing team ${competing_team}`
       "first_innings": "Royal Challengers Bangalore",
       "second_innings": "Kolkata Knight Riders",
       "match_status": "Lost",
@@ -156,7 +156,7 @@ Returns a response containing details of all recent matches of a team
 <summary>Implementation Files</summary>
 <br/>
 
-Use these files to complete the implementation:
+Used these files to complete the implementation:
 
 - `src/App.js`
 - `src/components/Home/index.js`
@@ -171,26 +171,6 @@ Use these files to complete the implementation:
 - `src/components/MatchCard/index.css`
 </details>
 
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- To display the animated loader, we need to import the Loader component using the below statement
-
-  ```
-  import Loader from 'react-loader-spinner'
-  ```
-
-- In order to display the given animated loader, pass the `type` and `color` props to the `Loader` component with values as **Oval** and **#ffffff** , respectively
-
-  ```
-  <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  ```
-
-</details>
-
 ### Important Note
 
 <details>
@@ -198,32 +178,28 @@ Use these files to complete the implementation:
 
 <br/>
 
-**The following instructions are required for the tests to pass**
-
-- The banner image in the Team Matches Route should have the alt attribute value as `team banner`
+- The banner image in the Team Matches Route has the alt attribute value as `team banner`
 - The alt attribute values for the images received from the response are given in the **Example response**
-- The API responses received from the given api URLs should be converted to camel case
-- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as `loader` to it as shown below
+- The API responses received from the given api URLs have converted to camel case
+- Wrapped the `Loader` component with an HTML container element and added the `testid` attribute value as `loader` to it as shown below
   ```
   <div testid="loader">
       <Loader type="Oval" color="#ffffff" height={50} width={50} />
   </div>
   ```
-- Render HomeRoute component when path in URL matches `/`
-- Render TeamMatchesRoute component when path in URL matches `/team-matches/:id`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js` file
-- Each TeamMatchesRoute should have different gradient colors as background based on the selected team
+- Renders HomeRoute component when path in URL matches `/`
+- Renders TeamMatchesRoute component when path in URL matches `/team-matches/:id`
 
 </details>
 
-### Resources
+### Resources Used
 
 <details>
 <summary>Image URLs</summary>
 
 - [https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png](https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png)
 - [https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png](https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png)
-- [https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png](https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png) alt should be **ipl logo**
+- [https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png](https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png) alt value is **ipl logo**
 
 </details>
 
@@ -269,9 +245,12 @@ Use these files to complete the implementation:
 
 </details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+### Conclusion
+
+- 🚀 This project highlights the effective use of React to create an interactive IPL Dashboard App. With clean component structures, state management and seamless API integration, the app provides an engaging user experience for viewing IPL team details and match statistics. 🏏💻
+
+- Thanks for checking out my IPL Dashboard App! This project showcases my skills in React, with features like API integration, and responsive design. Feel free to explore, fork, or contribute!
+
+- 🔗 Check it out here: [https://iplreportsPanel.ccbp.tech]
+
+Happy coding! 🚀
